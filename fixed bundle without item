@@ -1,0 +1,1110 @@
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+.bundle-box{
+cursor:pointer;
+}
+
+
+  .subscription_bundle_wrapperr .wrapper_bundles .bundle-box.active {
+    margin-top:8px;
+    border: 2px solid rgb(22 9 82);
+    border-radius: 8px;
+   
+    position: relative;
+ 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+
+
+p.you_save {
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+}
+
+ .subscription_bundle_wrapperr .wrapper_bundles .bundle-box {
+    margin-top: 8px;
+    background: #f1f1f1;
+    border: 1px solid #b6adcb;
+    border-radius: 8px;
+   
+    position: relative;
+    box-shadow: unset;
+}
+
+
+.subscription_bundle_wrapperr .wrapper_bundles .bundle-box:hover {
+    border: 2px solid #b6adcb;
+}
+
+  .subscription_bundle_wrapperr .wrapper_bundles .bundle-box.active:hover {
+    border: 2px solid rgb(22 9 82);
+  }
+  /* BEST VALUE BADGE */
+.wrapper_bundles .badge {
+    position: absolute;
+    top: -13px;
+    right: 14px;
+    background: #000;
+    color: #fff;
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0px 0;
+    padding: 1px 8px;
+    /* border-bottom-left-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+    background-color: rgb(22 9 82);
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-family: sans-serif;
+    letter-spacing: 0;
+}
+.subscription_bundle_wrapperr .wrapper_bundles .bundle-box.active .bundle-top {
+    background: #bfb6e8;
+}
+
+
+.wrapper_bundles .badge:before {
+    display: block;
+    position: absolute;
+    top: -1px;
+    width: 1px;
+    height: 1px;
+    content: "";
+    border-bottom-width: 13px;
+    border-bottom-style: solid;
+    filter: brightness(.7);
+    left: -7px;
+    border-left: 8px solid transparent;
+    border-bottom-color: rgb(22 9 82);
+}
+
+
+.wrapper_bundles .badge:after {
+    display: block;
+    position: absolute;
+    top: -1px;
+    width: 1px;
+    height: 1px;
+    content: "";
+    border-bottom-width: 13px;
+    border-bottom-style: solid;
+    filter: brightness(.7);
+    right: -7px;
+    border-right: 8px solid transparent;
+    border-bottom-color: rgb(22 9 82);
+}
+
+ .milk-thistile-bundle kaching-bundle{
+display:none;
+}
+.wrapper_bundles {
+    margin: 0 0 15px;
+}
+  /* TOP ROW */
+  .subscription_bundle_wrapperr .wrapper_bundles .bundle-top {
+    display: grid;
+    grid-template-columns: 24px auto auto;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+    background: #fbf4ff;
+    border-radius: 8px;
+}
+.wrapper_bundles .desc{
+width:100%;
+max-width:100%;
+}
+  .wrapper_bundles .product-img img {
+    width: 100%;
+mix-blend-mode: darken !important;
+  }
+
+
+ .wrapper_bundles .bundle-info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 0;
+}
+
+.wrapper_bundles .bundle-info .sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: #555555;
+    width: 100%;
+}
+.percent-off {
+    font-size: 11px;
+    background: rgb(22 9 82);
+    color: #fff;
+    padding: 3px 8px;
+    text-transform: unset;
+    letter-spacing: 0;
+    border-radius: 10px;
+}
+
+  .wrapper_bundles .bundle-info .desc {
+    margin-top: 7px;
+    font-size: 16px;
+    color: #303030;
+    font-weight: 300;
+}
+
+
+  /* PRICE BOX */
+  .wrapper_bundles .price-area {
+    text-align: right;
+  }
+
+
+  .wrapper_bundles .price-area .old {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: #555;
+}
+
+ .wrapper_bundles .price-area .new {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    
+    line-height: 100%;
+}
+
+ .wrapper_bundles .save-btn {
+    margin-top: 8px;
+    background: transparent;
+    color: #0a4f18;
+    border: 1px solid #0a4f18;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-size: 12px;
+    display: inline-block;
+}
+  /* FREE ITEMS */
+  .subscription_bundle_wrapperr .wrapper_bundles .free-item {
+       display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-top: 1px solid #b4d014 !important;
+    background: #b4d014;
+    display:none;
+  }
+
+
+  .wrapper_bundles .free-item-left {
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    font-size:13px;
+    font-weight:700;
+  }
+
+
+.wrapper_bundles .free-item img {
+    width: 100%;
+    mix-blend-mode: darken !important;
+    max-width: 30px;
+        border-radius: 4px;
+}
+
+
+  .wrapper_bundles .free-item-right {
+    text-align: right;
+    font-size: 12px;
+  }
+
+
+  .wrapper_bundles .free-old {
+    text-decoration: line-through;
+    color:#000;
+    margin-right: 6px;
+  }
+
+
+  .wrapper_bundles .free-free {
+    color:#000;
+    font-weight:700;
+    font-size:14px;
+  }
+ 
+.subscription_bundle_wrapperr .wrapper_price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: end;
+    justify-content: end;
+    align-items: end;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+}
+.free-item-two {
+    border: unset !important;
+    padding-top: 0 !important;
+}
+.kaching-second-bundle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EBEBE9;
+    border-radius: 0px 0px 14px 14px;
+    font-size: 14px;
+    gap: 8px;
+    color: #000000;
+    font-weight: 800;
+    padding: 10px 0px;
+}
+
+
+.wrapper_second_bundle_box {
+    padding: 10px 20px 0px 20px;
+    border-radius: 0 0 14px 14px;
+}
+.bundle-box.second_bundle_box {
+    padding: 0;
+}
+.bundle-box.second_bundle_box.active {
+
+
+    padding: 0;
+}
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:8px;            /* space between lines and text */
+  width: 100%;
+  padding: 20px 0 0;
+}
+
+
+.banner p {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+{% comment %} .banner .orange {
+  color: #f50;       /* bright orange like the example */
+} {% endcomment %}
+
+
+
+ .banner .line {
+    flex: 1;
+    height: 2px;
+    background-color:rgb(22 9 82 / 30%);
+    max-width: 312px;
+    display: flex;
+}     /* keeps lines short like the screenshot */
+
+.second_bundle_box.active .wrapper_second_bundle_box {
+    background: #fff8e9 !important;
+    border-radius: 14px;
+}
+.bundle-box.second_bundle_box.active {
+    padding: 0;
+}
+.bundle-box.second_bundle_box.active {
+    background: #F79E1B !important;
+}
+.bundle-box.second_bundle_box{
+background:#EBEBE9!important;
+}
+
+
+.bundle-box.second_bundle_box {
+    background: #EBEBE9 !important;
+    padding: 0;
+
+
+    border-color: #fff !important;
+}
+.bundle-box.second_bundle_box.active{
+ border-color: #F79E1B !important;
+}
+.bundle-box.second_bundle_box.active .kaching-second-bundle{
+    background: #F79E1B !important;
+}
+.wrapper_second_bundle_box {
+    background: #fff;
+}
+
+
+.subscription_bundle_wrapperr .bundle-info {
+    display: flex;
+    align-items: start;
+    gap: 0px 8px;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+}
+.subscription_bundle_wrapperr .bundle-box[data_index="1"] .bundle-info {
+    align-items: start;
+    flex-direction: column;
+    gap: 0px;
+}
+
+
+
+
+
+
+.subscription_bundle_wrapperr .subscription-box {
+    border: 2px dashed #160952;
+    border-radius: 0px;
+    padding: 15px 12px;
+    max-width: 100%;
+    transition: all 0.3s ease;
+    background: #fbf4ff;
+    margin: 15px 0px 0px;
+    display: flex !important;
+    border-radius: 10px;
+}
+.subscription_bundle_wrapperr .subscription-box.active {
+  background: #fbf4ff;
+}
+
+
+.subscription_bundle_wrapperr .subscription-label {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    cursor: pointer;
+    align-items: center;
+    gap: 17px;
+}
+
+
+.subscription_bundle_wrapperr .subscription-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #ffffff;
+  margin-top: 4px;
+}
+.subscription_bundle_wrapperr .subscription-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    margin: 0;
+    border-radius: 0;
+}
+.subscription_bundle_wrapperr .wrapper_bundles .bundle-box[data_index="2"] .bundle-top {
+    border-radius: 8px 8px 8px 8px;
+        padding-top: 18px;
+}
+.subscription_bundle_wrapperr .wrapper_bundles .bundle-box[data_index="3"] .bundle-top {
+    border-radius: 8px 8px 8px 8px;
+        padding-top: 18px;
+}
+
+.subscription_bundle_wrapperr .subscription-checkbox:checked::after {
+    content: "✔";
+    color: #000;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+}
+
+
+.subscription_bundle_wrapperr .subscription-content {
+  width: 100%;
+}
+
+
+.subscription_bundle_wrapperr .subscription-text .title {
+  font-size: 15px;
+  font-weight: 600;
+  color:#000;
+  line-height:100%;
+}
+
+
+.subscription_bundle_wrapperr .subscription-text .subtitle {
+    font-size: 11px;
+    line-height: 17px;
+    color: #555555;
+}
+
+.subscription-text {
+    line-height: 100%;
+}
+.subscription_bundle_wrapperr .subscription-dropdown {
+  margin-top: 14px;
+  display: none;
+}
+
+
+.subscription_bundle_wrapperr .subscription-dropdown select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+
+.subscription-text div {
+    line-height: 16px;
+}
+
+
+.subscription_bundle_wrapperr .bundle-box .product-img {
+    height: 24px;
+    width: 24px;
+    border: 2px solid #b6adcb;
+    border-radius: 100%;
+    position:relative;
+    background: #fff;
+}
+
+.subscription_bundle_wrapperr .bundle-box.active .product-img:before {
+    position: absolute;
+    content: '';
+    background: rgb(22 9 82);
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    top: 3px;
+    left: 3px;
+}
+.subscription_bundle_wrapperr .bundle-box.active .product-img {
+ border: 2px solid rgb(22 9 82);
+}
+
+.subscription_bundle_wrapperr .wrapper_bundles .bundle-box[data_index="2"] .free-item {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.subscription_bundle_wrapperr .wrapper_bundles .bundle-box[data_index="3"] .free-item[data_index="2"] {
+    border-radius: 0px 0px 8px 8px;
+    border-top: 1px solid #fff !important;
+}
+.subscription_bundle_wrapperr {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+{%assign product_one = block.settings.product_one %}
+{%assign product_two= block.settings.product_two %}
+{%assign product_three= block.settings.product_three %}
+
+
+
+
+{%assign sub_product_one = block.settings.sub_product_one %}
+{%assign sub_product_two= block.settings.sub_product_two %}
+{%assign sub_product_three= block.settings.sub_product_three %}
+
+
+
+
+{%assign gift_product_one = block.settings.gift_product_one  %}
+{%assign gift_product_two = block.settings.gift_product_two  %}
+{%assign gift_product_three = block.settings.gift_product_three  %}
+<div class="subscription_bundle_wrapperr">
+<div class="wrapper_bundles">
+
+
+<div class="banner">
+  <div class="line"></div>
+  <p>
+  CHOOSE YOUR PLAN
+  </p>
+  <div class="line"></div>
+</div>
+
+
+<div class="wrapper_bundles_without_subscripton">
+
+
+<div class="bundle-box " data_index= "1" var_id="{{product_one.variants.first.id}}" var_id_two="{{gift_product_one.variants.first.id }}" var_id_three="{{gift_product_two.variants.first.id }}" qty="1">
+ 
+
+
+  <div class="bundle-top">
+    <div class="product-img">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/0851/8860/8300/files/Kaching-Bundles-1_2_300x300.png?v=1753378366"> {% endcomment %}
+    </div>
+
+
+    <div class="bundle-info">
+      <h2>1 Bag</h2>
+
+      <p class="you_save">6 Pairs - 3 Week Supply </p>
+    </div>
+    <div class="price-area">
+      <div class="wrapper_price">
+      <div class="old">{{product_one.compare_at_price | money }}</div>
+      <div class="new">   {{product_one.price | money}}</div>
+   
+     
+</div>
+     
+         
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="bundle-box active" data_index= "2" var_id="{{product_two.variants.first.id }}" var_id_two="{{gift_product_one.variants.first.id }}" var_id_three="{{gift_product_two.variants.first.id}}" var_id_four="{{gift_product_three.variants.first.id }}" qty="2">
+  <div class="badge">Free Shipping</div>
+
+
+  <div class="bundle-top">
+    <div class="product-img">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/0851/8860/8300/files/Kaching-Bundles-3_3ef45d5a-2cd3-4705-9cba-b568872abb6b_300x300.png?v=1755816269"> {% endcomment %}
+    </div>
+
+
+    <div class="bundle-info">
+      <h2>Buy 2 + 1 Free</h2>
+
+          {% assign compare_total = product_two.compare_at_price | times: 3 %}
+{% assign price_total = product_two.price | times: 3 %}
+
+{% assign discount = compare_total | minus: price_total %}
+{% assign percent = discount | times: 100 | divided_by: compare_total %}
+
+<div class="percent-off">
+ Save {{discount | money }}
+</div>
+<p class="you_save">18 Pairs - 2 Month Supply </p>
+    
+
+    </div>
+    <div class="price-area">
+      <div class="wrapper_price">
+     <div class="old">{{product_two.compare_at_price | money }}</div>
+      <div class="new">   {{product_two.price | money}}</div>
+</div>
+     
+    </div>
+  </div>
+  <!-- FREE ITEM 1 -->
+  <div class="free-item" data_index="1">
+    <div class="free-item-left">
+     
+      <img src="{{ gift_product_one.featured_image | img_url: 'master' }}" alt="{{ gift_product_one.title }}">
+      <span>{{gift_product_one.title }}</span>
+    </div>
+    <div class="free-item-right">
+      <span class="free-old">{{gift_product_one.price | money  }}</span>
+      
+    </div>
+  </div>
+ 
+
+
+
+
+
+ 
+
+</div>
+
+
+
+
+
+
+
+
+ <div class="bundle-box third_bundle_box" data_index= "3" var_id="{{product_three.variants.first.id }}" var_id_two="{{gift_product_one.variants.first.id }}" var_id_three="{{gift_product_two.variants.first.id}}" var_id_four="{{gift_product_three.variants.first.id }}" qty="3">
+  <div class="badge">Best Value</div>
+
+
+  <div class="bundle-top">
+    <div class="product-img">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/0851/8860/8300/files/Kaching-Bundles-5_94d283fc-6bc5-46cd-8621-ce42cc86013e_300x300.png?v=1755816328"> {% endcomment %}
+    </div>
+
+
+    <div class="bundle-info">
+      <h2>Buy 3 + 2 Free </h2>
+      {% assign compare_total = product_three.compare_at_price %}
+{% assign price_total = product_three.price %}
+
+{% assign discount = compare_total | minus: price_total %}
+{% assign percent = discount | times: 100 | divided_by: compare_total %}
+
+<div class="percent-off">
+ Save  {{discount | money }}
+</div>
+ <p class="you_save">30 Pairs - 4 Month Supply </p>
+    </div>
+    <div class="price-area">
+      <div class="wrapper_price">
+     <div class="old">{{product_three.compare_at_price | money }}</div>
+      <div class="new">   {{product_three.price | money}}</div>
+</div>
+     
+    </div>
+  </div>
+  <!-- FREE ITEM 1 -->
+  <div class="free-item" data_index="1">
+    <div class="free-item-left">
+     
+       <img src="{{ gift_product_one.featured_image | img_url: 'master' }}" alt="{{ gift_product_one.title }}">
+      <span>{{gift_product_one.title }}</span>
+    </div>
+    <div class="free-item-right">
+      <span class="free-old">{{gift_product_one.price | money  }}</span>
+      
+    </div>
+  </div>
+   <div class="free-item " data_index="2">
+    <div class="free-item-left">
+       <img src="{{ gift_product_two.featured_image | img_url: 'master' }}" alt="{{ gift_product_one.title }}">
+      <span>{{gift_product_two.title }}</span>
+    </div>
+    <div class="free-item-right">
+      <span class="free-old">{{gift_product_two.price | money  }}</span>
+     
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div class="wrapper_bundles_with_subscripton" style="display:none;">
+
+
+<div class="bundle-box " data_index= "1" var_id="{{sub_product_one.variants.first.id}}" var_id_two="{{gift_product_one.variants.first.id }}" var_id_three="{{gift_product_two.variants.first.id }}" qty="1">
+ 
+
+
+  <div class="bundle-top">
+    <div class="product-img">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/0851/8860/8300/files/Kaching-Bundles-1_2_300x300.png?v=1753378366"> {% endcomment %}
+    </div>
+
+
+    <div class="bundle-info">
+      <h2>1 Bag</h2>
+      <p class="you_save">6 Pairs - 3 Week Supply </p>
+     
+    </div>
+    <div class="price-area">
+      <div class="wrapper_price">
+      <div class="old">{{sub_product_one.compare_at_price | money }}</div>
+      <div class="new">   {{sub_product_one.price  | money}}</div>
+   
+     
+</div>
+     
+         
+    </div>
+  </div>
+  
+
+</div>
+
+
+<div class="bundle-box active" data_index= "2" var_id="{{sub_product_two.variants.first.id }}" var_id_two="{{gift_product_one.variants.first.id }}" var_id_three="{{gift_product_two.variants.first.id}}" var_id_four="{{gift_product_three.variants.first.id }}" qty="2">
+  <div class="badge">Free Shipping</div>
+
+
+  <div class="bundle-top">
+    <div class="product-img">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/0851/8860/8300/files/Kaching-Bundles-3_3ef45d5a-2cd3-4705-9cba-b568872abb6b_300x300.png?v=1755816269"> {% endcomment %}
+    </div>
+
+
+    <div class="bundle-info">
+      <h2>Buy 2 + 1 Free </h2>
+       {% assign compare_total = sub_product_two.compare_at_price %}
+{% assign price_total = sub_product_two.price %}
+
+{% assign discount = compare_total | minus: price_total %}
+{% assign percent = discount | times: 100 | divided_by: compare_total %}
+
+<div class="percent-off">
+ Save {{discount | money }}
+</div>
+      
+ <p class="you_save">18 Pairs - 2 Month Supply</p>
+    </div>
+    <div class="price-area">
+      <div class="wrapper_price">
+     <div class="old">{{sub_product_two.compare_at_price | money }}</div>
+      <div class="new">   {{sub_product_two.price | money}}</div>
+</div>
+     
+    </div>
+  </div>
+  <!-- FREE ITEM 1 -->
+  <div class="free-item" data_index="1">
+    <div class="free-item-left">
+     
+      <img src="{{ gift_product_one.featured_image | img_url: 'master' }}" alt="{{ gift_product_one.title }}">
+
+     <span>{{gift_product_one.title }}</span>
+    </div>
+    <div class="free-item-right">
+      <span class="free-old">{{gift_product_one.price | money  }}</span>
+      
+    </div>
+  </div>
+  
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+ <div class="bundle-box third_bundle_box" data_index= "3" var_id="{{sub_product_three.variants.first.id }}" var_id_two="{{gift_product_one.variants.first.id }}" var_id_three="{{gift_product_two.variants.first.id}}" var_id_four="{{gift_product_three.variants.first.id }}" qty="3">
+  <div class="badge">Best Value</div>
+
+
+  <div class="bundle-top">
+    <div class="product-img">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/0851/8860/8300/files/Kaching-Bundles-5_94d283fc-6bc5-46cd-8621-ce42cc86013e_300x300.png?v=1755816328"> {% endcomment %}
+    </div>
+
+
+    <div class="bundle-info">
+      <h2>Buy 3 + 2 Free </h2>
+
+     {% assign compare_total = sub_product_three.compare_at_price %}
+{% assign price_total = sub_product_three.price %}
+
+{% assign discount = compare_total | minus: price_total %}
+{% assign percent = discount | times: 100 | divided_by: compare_total %}
+
+<div class="percent-off">
+ Save {{discount | money }}
+</div>
+ <p class="you_save">30 Pairs - 4 Month Supply </p>
+
+     
+    </div>
+    <div class="price-area">
+      <div class="wrapper_price">
+     <div class="old">{{sub_product_three.compare_at_price | money }}</div>
+      <div class="new">   {{sub_product_three.price  | money}}</div>
+</div>
+     
+    </div>
+  </div>
+  <!-- FREE ITEM 1 -->
+  <div class="free-item" data_index="1">
+    <div class="free-item-left">
+     
+      <img src="{{ gift_product_one.featured_image | img_url: 'master' }}" alt="{{ gift_product_one.title }}">
+     <span>{{gift_product_one.title }}</span>
+    </div>
+    <div class="free-item-right">
+      <span class="free-old">{{gift_product_one.price | money  }}</span>
+     
+    </div>
+  </div>
+ 
+  <div class="free-item " data_index="2">
+    <div class="free-item-left">
+       <img src="{{ gift_product_two.featured_image | img_url: 'master' }}" alt="{{ gift_product_one.title }}">
+     <span>{{gift_product_two.title }}</span>
+    </div>
+    <div class="free-item-right">
+      <span class="free-old">{{gift_product_two.price | money  }}</span>
+      
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+<div class="subscription-box" id="subscriptionBox">
+  <label class="subscription-label">
+    <input type="checkbox" id="subscriptionCheck" class="subscription-checkbox" >
+
+
+    <div class="subscription-content">
+      <div class="subscription-text">
+        <span class="title"> Save More with Automatic Refills</span>
+        <div>
+        <span class="subtitle">Zero Commitment | Exclusive Discounts | Cancel Anytime</span>
+        </div>
+      </div>
+    </div>
+  </label>
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script>
+ 
+$(document).ready(function(){
+    $('input[name="selling_plan"]').remove();
+   $('.ultimate_pack_design_ga_new  kaching-bundle').remove();
+ $('.milk-thistile-bundle kaching-bundle').remove();
+setTimeout(function(){
+ $('.wrapper_bundles_with_subscripton .bundle-box').eq(1).trigger('click');
+ 
+},1000);
+  $(document).on('click', '.bundle-box', function () {
+
+
+    $('.bundle-box').removeClass('active');
+    $(this).addClass('active');
+
+
+    let index = $(this).attr("data_index");
+    let var_id = $(this).attr("var_id");
+    let var_id_two = $(this).attr("var_id_two");
+    let var_id_three = $(this).attr("var_id_three");
+ let var_id_four = $(this).attr("var_id_four");
+ var qty = $(this).attr('qty');
+ 
+    // Set main variant in form
+    $('.product-variant-id').val(var_id);
+
+$('.custom_quantity').val(qty);
+    // Remove previous bundle items
+    $('.bundle-extra').remove();
+
+
+    // BUNDLE LOGIC
+   
+
+
+  });
+
+
+});
+
+
+
+
+
+
+$(document).ready(function () {
+  var data_index = '';
+$('#subscriptionCheck').prop('checked', true); 
+  function toggleSubscription() {
+
+
+    // Get active bundle index first
+    $('.bundle-box.active').each(function () {
+      data_index = $(this).attr('data_index'); // or .data('index')
+    });
+
+
+    if ($('#subscriptionCheck').is(':checked')) {
+
+
+      $('#subscriptionBox').addClass('active');
+      $('.wrapper_bundles_with_subscripton').show();
+      $('.wrapper_bundles_without_subscripton').hide();
+
+
+      $('.wrapper_bundles_with_subscripton .bundle-box[data_index="' + data_index + '"]')
+        .trigger('click');
+
+
+    } else {
+
+
+      $('#subscriptionBox').removeClass('active');
+      $('.wrapper_bundles_with_subscripton').hide();
+      $('.wrapper_bundles_without_subscripton').show();
+
+
+      $('.wrapper_bundles_without_subscripton .bundle-box[data_index="' + data_index + '"]')
+        .trigger('click');
+    }
+  }
+
+
+  // Initial run
+  toggleSubscription();
+
+
+  // On checkbox change
+  $('#subscriptionCheck').on('change', function () {
+    toggleSubscription();
+  });
+
+
+});
+
+
+</script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // 1. Remove <kaching-bundle> custom element
+  document.querySelectorAll('kaching-bundle').forEach(el => el.remove());
+
+  // 2. Remove element with BOTH classes
+  document
+    .querySelectorAll('.sealsubs-target-element.sealsubs-full')
+    .forEach(el => el.remove());
+
+  // 3. Remove selling plan input
+  document
+    .querySelectorAll('input[name="selling_plan"]')
+    .forEach(el => el.remove());
+
+  // 4. Remove kaching bundle property input
+  document
+    .querySelectorAll('input[name="properties[__kaching_bundles]"]')
+    .forEach(el => el.remove());
+
+  // 5. Remove quantity input
+  document
+    .querySelectorAll('input[name="quantity"]')
+    .forEach(el => el.remove());
+
+});
+</script>
+<script>
+(function () {
+
+  function cleanupInjectedElements() {
+
+    // Kaching bundle element
+    document.querySelectorAll('kaching-bundle')
+      .forEach(el => el.remove());
+
+    // Seal Subscriptions blocks
+    document.querySelectorAll(
+      '.sealsubs-target-element.sealsubs-full, ' +
+      '.sealsubs-target-element.sls-homepage-automatic'
+    ).forEach(el => el.remove());
+
+    // Kaching hidden bundle input
+    document.querySelectorAll(
+      'input[name="properties[__kaching_bundles]"]'
+    ).forEach(el => el.remove());
+
+    // Remove ONLY hidden quantity inputs (safe)
+    document.querySelectorAll(
+      'input[type="hidden"][name="quantity"]'
+    ).forEach(el => el.remove());
+  }
+
+  // Run once
+  cleanupInjectedElements();
+
+  // Observe future DOM injections
+  const observer = new MutationObserver(cleanupInjectedElements);
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+})();
+</script>
+
+
+{% schema %}
+{
+  "name": "Custom Bundle",
+  "tag": null,
+  "settings": [
+   {
+"type":"product",
+"id":"sub_product_one",
+"label":"Select Sub Product"
+},
+   {
+"type":"product",
+"id":"sub_product_two",
+"label":"Select Sub Product"
+},
+   {
+"type":"product",
+"id":"sub_product_three",
+"label":"Select Sub Product"
+},
+   {
+"type":"product",
+"id":"product_one",
+"label":"Select Product"
+},
+   {
+"type":"product",
+"id":"product_two",
+"label":"Select Product"
+},
+   {
+"type":"product",
+"id":"product_three",
+"label":"Select  Product"
+}
+  ],
+  "presets": [
+    {
+      "name": "Custom Bundle",
+      "category": "Urgency"
+    }
+  ]
+}
+{% endschema %}
